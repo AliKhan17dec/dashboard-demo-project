@@ -317,7 +317,7 @@ export default function Header() {
         {/* Select with gradient border - Hide on screens less than xl */}
         {!isMobileView && (
           <div
-            className="relative rounded-full p-[1px] w-fit"
+            className="relative rounded-full p-[1px] w-45"
             style={{
               background:
                 "linear-gradient(135deg, #767676 0%, #0B0B0B 26%, #767676 100%)",

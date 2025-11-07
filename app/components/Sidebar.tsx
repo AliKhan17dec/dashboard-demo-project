@@ -50,7 +50,7 @@ export default function Sidebar() {
 
         </div>
 
-        <div className="relative w-10 h-10 rounded-lg flex items-center justify-center mx-auto">
+        <div className="relative w-10 h-10 rounded-lg flex items-center justify-center mx-auto mt-5">
           {/* Gradient border */}
           <div
             className="absolute inset-0 rounded-lg p-[1px]"
