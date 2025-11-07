@@ -113,59 +113,12 @@ export default function Header() {
             <div className="text-[#FFFFFF] font-arima leading-none tracking-normal" style={{ background: 'linear-gradient(to bottom, #FFFFFF, #767676)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Time Zone</div>
             <div className="text-white font-bold">13:31:08 (6+)</div>
           </div>
-        
 
-        {/* Search - Only show on desktop (xl and above) */}
-        {!isMobileView && (
-          <div
-            className="relative rounded-full p-[1px] w-fit"
-            style={{
-              background:
-                "linear-gradient(135deg, #767676 0%, #0B0B0B 26%, #767676 100%)",
-            }}
-          >
-            {/* INNER INPUT WRAPPER with dark background */}
-            <div className="rounded-full bg-[#111111] flex items-center pl-3 pr-10 py-2">
-              <input
-                type="text"
-                placeholder="Search Instruments"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="bg-transparent text-white text-sm focus:outline-none placeholder:text-[#A5A5A5] w-40"
-              />
 
-              {/* Gradient Search Icon */}
-              <div className="absolute right-2 top-1/2 -translate-y-1/2">
-                <div className="p-[6px] rounded-full bg-gradient-to-b from-black to-[#E85102] shadow-[0_0_10px_#E85102]">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-4 w-4 text-white"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth={2}
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
-      </div>
-      </div>
-
-      {/* Mobile Menu Overlay - Show on screens less than xl */}
-      {isMobileView && isMobileMenuOpen && (
-        <div className="absolute top-full left-0 right-0 bg-black border-b border-gray-800 z-50 p-6">
-          {/* Search Bar in Mobile Menu */}
-          <div className="mb-6">
+          {/* Search - Only show on desktop (xl and above) */}
+          {!isMobileView && (
             <div
-              className="relative rounded-full p-[1px] w-full"
+              className="relative rounded-full p-[1px] w-fit"
               style={{
                 background:
                   "linear-gradient(135deg, #767676 0%, #0B0B0B 26%, #767676 100%)",
@@ -178,7 +131,7 @@ export default function Header() {
                   placeholder="Search Instruments"
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="bg-transparent text-white text-sm focus:outline-none placeholder:text-[#A5A5A5] w-full"
+                  className="bg-transparent text-white text-sm focus:outline-none placeholder:text-[#A5A5A5] w-40"
                 />
 
                 {/* Gradient Search Icon */}
@@ -202,8 +155,14 @@ export default function Header() {
                 </div>
               </div>
             </div>
-          </div>
+          )}
+        </div>
+      </div>
 
+      {/* Mobile Menu Overlay - Show on screens less than xl */}
+      {isMobileView && isMobileMenuOpen && (
+        <div className="absolute top-full left-0 right-0 bg-black border-b border-gray-800 z-50 p-6">
+          {/* Search Bar in Mobile Menu */}
           {/* Account Selector and Bell Icon in Mobile Menu */}
           <div className="flex items-center space-x-4 mb-6">
             {/* Account Selector in Mobile Menu */}
@@ -248,6 +207,48 @@ export default function Header() {
               <BiBell className="h-5 w-5 text-white font-bold" />
             </button>
           </div>
+          <div className="mb-6">
+            <div
+              className="relative rounded-full p-[1px] w-full"
+              style={{
+                background:
+                  "linear-gradient(135deg, #767676 0%, #0B0B0B 26%, #767676 100%)",
+              }}
+            >
+              {/* INNER INPUT WRAPPER with dark background */}
+              <div className="rounded-full bg-[#111111] flex items-center pl-3 pr-10 py-2">
+                <input
+                  type="text"
+                  placeholder="Search Instruments"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="bg-transparent text-white text-sm focus:outline-none placeholder:text-[#A5A5A5] w-full"
+                />
+
+                {/* Gradient Search Icon */}
+                <div className="absolute right-2 top-1/2 -translate-y-1/2">
+                  <div className="p-[6px] rounded-full bg-gradient-to-b from-black to-[#E85102] shadow-[0_0_10px_#E85102]">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-4 w-4 text-white"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth={2}
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
 
           <div className="grid grid-cols-2 gap-4 text-sm">
             <div className="items-center space-y-2">
