@@ -27,10 +27,13 @@ export default function Sidebar() {
             className="object-contain text-white"
           />
         </div>
-        <div className="w-14 h-14  rounded-lg flex items-center justify-center relative">
-          <MdWindow className="h-8 w-8 text-white font-bold bg-gradient-to-b from-black to-[#E85102] p-[5px] rounded-full" />
-
-        </div>
+        <div className="w-14 h-14 rounded-lg flex items-center justify-center relative">
+  {/* Left vertical bar — aligned to left edge */}
+  <div className="absolute left-0 top-1/2 -translate-y-1/2 h-7 w-1 bg-[#E85102] rounded-r-md"></div>
+  
+  {/* Centered icon */}
+  <MdWindow className="h-8 w-8 text-white font-bold bg-gradient-to-b from-black to-[#E85102] p-[5px] rounded-full" />
+</div>
 
         <div className="w-14 h-14  rounded-lg flex items-center justify-center relative">
           <BiPlus className="h-8 w-8 text-white font-bold " />
